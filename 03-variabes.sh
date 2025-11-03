@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "this is third file"
 
 PERSON1=$1
 PERSON2=$2
