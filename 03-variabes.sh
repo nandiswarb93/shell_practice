@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
-PERSON1=$1
-PERSON2=$2
+#arguments
+PERSON1=$1 #variables
+PERSON2=$2 #variables
 
 echo "Conversation starts."
 
