@@ -2,8 +2,8 @@
 
 echo "this is third file"
 
-PERSON1=sachin
-PERSON2=rahul
+PERSON1=$1
+PERSON2=$2
 
 echo "$PERSON1: Hi $PERSON2, how are you today?"
 sleep 1
