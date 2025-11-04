@@ -9,7 +9,7 @@ N="\e[0m"
 
 
 if [ $USERID -ne 0 ]; then
-    echo "ERROR :: Please run this script with root privelege"
+    echo -e "ERROR :: Please run this script with root privelege"
     exit 1 #failure is other than 0
 fi
 
@@ -27,7 +27,7 @@ if [ $? -ne 0 ]; then
     dnf install mysql -y
     VALIDATE $? "MYSQL"
 else
-    echo "MySql already exist ... $G Skipping $N"
+    echo -e "MySql already exist ... $G Skipping $N"
 fi
 
 
@@ -36,7 +36,7 @@ if [ $? -ne 0 ]; then
     dnf install nginx -y
     VALIDATE $? "Nginx"
 else
-    echo "Nginx already exist ... $G Skipping $N"
+    echo -e "Nginx already exist ... $G Skipping $N"
 fi
 
 
@@ -47,5 +47,5 @@ if [ $? -ne 0 ]; then
     dnf install python3
     VALIDATE $? "python3"
 else
-    echo "python3 already installed... $G Skipping $N"
+    echo -e "python3 already installed... $G Skipping $N"
 fi
