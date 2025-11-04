@@ -12,21 +12,21 @@ SCRIPT_NAME=$( echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOGS_FOLDER
-echo "Script Started executed at : $(date)"
+echo "Script Started executed at : $(date)" | tee -a $LOG_FILE
 
 
 
 if [ $USERID -ne 0 ]; then
-    echo -e "ERROR :: Please run this script with root privelege"
+    echo -e "ERROR :: Please run this script with root prevelege"
     exit 1 #failure is other than 0
 fi
 
 VALIDATE(){
     if [ $1 -ne 0 ]; then
-        echo -e "Error :: Installing $2 .... is $R Failure $N"
+        echo -e "Error :: Installing $2 .... is $R Failure $N" | tee -a $LOG_FILE
         exit 1
     else
-        echo -e "$G Installing $2 is success $N"
+        echo -e "$G Installing $2 is success $N" | tee -a $LOG_FILE
     fi
 }
 
