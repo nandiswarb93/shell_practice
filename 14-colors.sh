@@ -4,7 +4,7 @@ USERID=$(id -u)
 
 R="\e[31m"
 G="\e[32m"
-y="\e[33m"
+Y="\e[33m"
 N="\e[0m"
 
 
@@ -27,7 +27,7 @@ if [ $? -ne 0 ]; then
     dnf install mysql -y
     VALIDATE $? "MYSQL"
 else
-    echo -e "MySql already exist ... $G Skipping $N"
+    echo -e "MySql already exist ... $Y Skipping $N"
 fi
 
 
@@ -36,7 +36,7 @@ if [ $? -ne 0 ]; then
     dnf install nginx -y
     VALIDATE $? "Nginx"
 else
-    echo -e "Nginx already exist ... $G Skipping $N"
+    echo -e "Nginx already exist ... $Y Skipping $N"
 fi
 
 
@@ -47,5 +47,5 @@ if [ $? -ne 0 ]; then
     dnf install python3
     VALIDATE $? "python3"
 else
-    echo -e "python3 already installed... $G Skipping $N"
+    echo -e "python3 already installed... $Y Skipping $N"
 fi
