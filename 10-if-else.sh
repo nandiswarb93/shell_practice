@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#shebang
 NUMBER=10
 
 if [ NUMBER -lt 10]; then
