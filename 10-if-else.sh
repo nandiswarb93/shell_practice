@@ -1,4 +1,6 @@
-#!/bin/bash //SHEBANG
+#!/bin/bash
+
+#SHEBANG
 
 NUMBER=10
 
